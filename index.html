@@ -1,0 +1,48 @@
+<div class="main">
+	<div style="margin: auto;width: 50%;padding: 10px;">
+		<div class="droppable ui-event-drop" style="background-color: e0e0e0;">
+			<b><p style="text-align: center">Select an Event</p></b>
+		</div>
+		
+		<div id="drop-methods">
+			
+		</div>
+		
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		<button onclick="app.ui.addCommand();">Add command</button>
+		
+		<div id="current-commands">
+			
+		</div>
+		
+	</div>	
+</div>
+
+<div class="sidenav">
+	<a id="sidenav-events" onclick="app.ui.switchNavigation('events');" style="color: #f1f1f1;">Events</a>
+	<a id="sidenav-methods" onclick="app.ui.switchNavigation('methods');">Methods</a>
+	
+	<hr>
+	
+	<div style="display: block" id="events">
+		
+	</div>
+	
+	<div style="display: none;" id="methods">
+	
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="./css/builder.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="./js/app.js?time=<?php echo time(); ?>"></script>
+
+<script>
+	const app = new App("name", "desc", "1.8");
+	app.load();
+</script>

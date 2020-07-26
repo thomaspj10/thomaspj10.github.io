@@ -1,0 +1,59 @@
+.button {
+	position: relative;
+	background-color: #4CAF50;
+	border: none;
+	font-size: 16px;
+	color: #FFFFFF;
+	padding: 20px;
+	width: 150px;
+	text-align: center;
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.button:after {
+	content: "";
+	background: #f1f1f1;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
+}
+
+.button:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
+
+input[type=text],
+select,
+textarea {
+	width: 300px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+}
+
+.center {
+	margin: auto;
+	width: 99%;
+	padding: 10px;
+	text-align:center;
+}
+
+h2 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body {
+	background-color: #f0f2f5;
+}

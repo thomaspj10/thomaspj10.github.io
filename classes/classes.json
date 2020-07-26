@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Player",
+		"description": "Get information and perform actions on behalf of the Player.",
+		"methods": [
+			{
+				"returns": "void",
+				"method": "chat",
+				"parameters": "String",
+				"description": "Says a message (or runs a command)."
+			},
+			{
+				"returns": "void",
+				"method": "setDisplayName",
+				"parameters": "String",
+				"description": "Sets the 'friendly' name to display of this player."
+			},
+			{
+				"returns": "void",
+				"method": "sendTitle",
+				"parameters": "String String int int int",
+				"description": "Sends a title and a subtitle message to the player."
+			}
+		]
+	}
+]

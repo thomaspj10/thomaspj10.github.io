@@ -1,0 +1,32 @@
+[
+	{
+		"name": "PlayerJoinEvent",
+		"description": "Executes when a Player joins the server.",
+		"methods": [
+			{
+				"returns": "Player",
+				"method": "getPlayer",
+				"parameters": "",
+				"description": "Returns the Player object."
+			},
+			{
+				"returns": "void",
+				"method": "setJoinMessage",
+				"parameters": "String",
+				"description": "Sets the join message to send to all online players"
+			}
+		]
+	},
+	{
+		"name": "PlayerMoveEvent",
+		"description": "Executes when a Player moves.",
+		"methods": [
+			{
+				"returns": "Player",
+				"method": "getPlayer",
+				"parameters": "",
+				"description": "Returns the Player object."
+			}
+		]
+	}
+]
