@@ -39,7 +39,7 @@ class App {
         // Set the UI state.
         self.UI.setMenu("create_plugin");
 
-      }, 0);//Math.max((3000 - loadTime), 0));
+      }, Math.max((3000 - loadTime), 0));
     });
   }
 
