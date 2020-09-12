@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="src/css/create_plugin.css">
+
+<div class="create_plugin">
+  <h2>Create your Plugin!</h2>
+
+  <p id="app-feedback"></p>
+
+  <label for="name">Enter the Plugin Name</label><br>
+  <input autocomplete="off" name="name" id="app-PluginName" type="text" placeholder="Plugin Name"></input><br><br>
+
+  <label for="description">Enter the Plugin Description</label><br>
+  <input autocomplete="off" name="description" id="app-PluginDescription" type="text" placeholder="Plugin Description"></input><br><br>
+
+  <label for="version">Pick your desired version</label><br>
+  <select autocomplete="off" id="app-PluginVersion" name="version">
+    <option value="minecraft18">Version 1.8</option>
+    <option value="minecraft19">Version 1.9</option>
+  </select>
+
+  <button onclick="app.UI.createPlugin();">Create Plugin</button>
+</div>

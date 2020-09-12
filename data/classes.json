@@ -1,0 +1,259 @@
+[
+  {
+    "name": "Player",
+    "description": "Get information and perform actions on behalf of the Player.",
+    "methods": [
+      {
+        "returns": "void",
+        "method": "chat",
+        "basicName": "chat",
+        "parameters": [
+          {
+            "type": "String",
+            "name": "message",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "giveExp",
+        "basicName": "give experience",
+        "parameters": [
+          {
+            "type": "int",
+            "name": "amount",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "giveExpLevels",
+        "basicName": "give experience levels",
+        "parameters": [
+          {
+            "type": "int",
+            "name": "amount",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "kickPlayer",
+        "basicName": "kick",
+        "parameters": [
+          {
+            "type": "String",
+            "name": "message",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "boolean",
+        "method": "performCommand",
+        "basicName": "perform command",
+        "parameters": [
+          {
+            "type": "String",
+            "name": "command",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "resetPlayerTime",
+        "basicName": "reset time",
+        "parameters": []
+      },
+      {
+        "returns": "void",
+        "method": "resetPlayerWeather",
+        "basicName": "reset weather",
+        "parameters": []
+      },
+      {
+        "returns": "void",
+        "method": "setAllowFlight",
+        "basicName": "set allow flight",
+        "parameters": [
+          {
+            "type": "boolean",
+            "name": "flight",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setDisplayName",
+        "basicName": "set displayname",
+        "parameters": [
+          {
+            "type": "String",
+            "name": "name",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setExhaustion",
+        "basicName": "set exhaustion",
+        "parameters": [
+          {
+            "type": "float",
+            "name": "value",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setFlying",
+        "basicName": "set flight",
+        "parameters": [
+          {
+            "type": "boolean",
+            "name": "value",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setFlySpeed",
+        "basicName": "set flyspeed",
+        "parameters": [
+          {
+            "type": "float",
+            "name": "speed",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setFoodLevel",
+        "basicName": "set foodlevel",
+        "parameters": [
+          {
+            "type": "int",
+            "name": "foodlevel",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setPlayerTime",
+        "basicName": "set time",
+        "parameters": [
+          {
+            "type": "long",
+            "name": "time",
+            "isArray": "false"
+          },
+          {
+            "type": "boolean",
+            "name": "relative",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setResourcePack",
+        "basicName": "set resourcepack",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "url",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setSaturation",
+        "basicName": "set saturation",
+        "parameters": [
+          {
+            "type": "float",
+            "name": "value",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setSprinting",
+        "basicName": "set sprinting",
+        "parameters": [
+          {
+            "type": "boolean",
+            "name": "sprinting",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setSneaking",
+        "basicName": "set sneaking",
+        "parameters": [
+          {
+            "type": "boolean",
+            "name": "sneak",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "closeInventory",
+        "basicName": "close inventory",
+        "parameters": []
+      },
+      {
+        "returns": "void",
+        "method": "setOp",
+        "basicName": "set operator",
+        "parameters": [
+          {
+            "type": "value",
+            "name": "boolean",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "sendMessage",
+        "basicName": "send message",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "message",
+            "isArray": "false"
+          }
+        ]
+      },
+      {
+        "returns": "void",
+        "method": "setWhitelisted",
+        "basicName": "set whitelisted",
+        "parameters": [
+          {
+            "type": "boolean",
+            "name": "value",
+            "isArray": "false"
+          }
+        ]
+      }
+    ]
+  }
+]

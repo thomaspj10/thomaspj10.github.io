@@ -1,0 +1,133 @@
+<div style="text-align: center;">
+  <input id="class" autocomplete="off" placeholder="Class"></input><br>
+  <input id="description" autocomplete="off" placeholder="Description"></input><br><br>
+
+  <input id="method" autocomplete="off" placeholder="Method"></input><br>
+  <input id="basicName" autocomplete="off" placeholder="BasicName"></input><br>
+  <input id="returns" autocomplete="off" placeholder="Return Class"></input><br><br>
+
+  <input id="name" autocomplete="off" placeholder="Parameter Name"></input><br>
+  <input id="type" autocomplete="off" placeholder="Parameter Type"></input><br>
+  <select id="isArray">
+    <option value="false">False</option>
+    <option value="true">True</option>
+  </select><br><br>
+
+  <button onclick="addParameter();">Add Parameter</button><br><br>
+
+  <button onclick="finish();">Finish</button><br><br>
+
+  <button onclick="exit();">Close</button><br><br>
+
+  <button onclick="copy();">Copy</button>
+</div>
+
+<input id="copy" style="display: none;"></input>
+
+<script>
+  data = [];
+  currentClass = {};
+  currentMethod = {};
+  methods = [];
+  parameters = [];
+
+  function addClass() {
+    var c = document.getElementById("class").value;
+    var d = document.getElementById("description").value;
+
+    document.getElementById("class").value = "";
+    document.getElementById("description").value = "";
+
+    currentClass = {};
+    currentClass["name"] = c;
+    currentClass["description"] = d;
+    currentClass["methods"] = methods;
+  }
+
+  function addMethod() {
+    var r = document.getElementById("returns").value;
+    var m = document.getElementById("method").value;
+    var b = document.getElementById("basicName").value;
+
+    document.getElementById("returns").value = "";
+    document.getElementById("method").value = "";
+    document.getElementById("basicName").value = "";
+
+    currentMethod = {};
+    currentMethod["returns"] = r;
+    currentMethod["method"] = m;
+    currentMethod["basicName"] = b;
+    currentMethod["parameters"] = parameters;
+
+    methods.push(currentMethod);
+    parameters = [];
+    currentMethod = {};
+  }
+
+  function addParameter() {
+    var t = document.getElementById("type").value;
+    var n = document.getElementById("name").value;
+    var i = document.getElementById("isArray").value;
+
+    document.getElementById("type").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("isArray").value = "false";
+
+    var parameter = {};
+    parameter["type"] = t;
+    parameter["name"] = n;
+    parameter["isArray"] = i;
+
+    parameters.push(parameter);
+  }
+
+  function finish() {
+    addMethod();
+  }
+
+  function exit() {
+    addClass();
+    methods = [];
+
+    data.push(currentClass);
+    currentClass = {};
+  }
+
+  function copy() {
+    var json = JSON.stringify(data);
+
+    navigator.clipboard.writeText(json).then(function() {
+      alert('Async: Copying to clipboard was successful!');
+    }, function(err) {
+      alert('Async: Could not copy text: ', err);
+    });
+  }
+
+</script>
+
+<style>
+  input, select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+</style>

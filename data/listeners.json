@@ -1,0 +1,38 @@
+[
+    {
+      "name": "PlayerMoveEvent",
+      "description": "Fires each time a Player moves.",
+      "methods": [
+        {
+          "returns": "Player",
+          "method": "getPlayer",
+          "basicName": "player",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "name": "PlayerJoinEvent",
+      "description": "Fires each time a Player joins the server.",
+      "methods": [
+        {
+          "returns": "Player",
+          "method": "getPlayer",
+          "basicName": "player",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "name": "PlayerQuitEvent",
+      "description": "Fires each time a Player quits the server.",
+      "methods": [
+        {
+          "returns": "Player",
+          "method": "getPlayer",
+          "basicName": "player",
+          "parameters": []
+        }
+      ]
+    }
+]

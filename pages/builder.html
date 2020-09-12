@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="src/css/navigation.css">
+<link rel="stylesheet" href="src/css/builder.css">
+
+<!-- Left side of the screen. -->
+<div style="width: 25%; float:left">
+  <!-- Top part of the screen. -->
+  <div style="height: 38%;border-style: solid;border-width: 2px;border-bottom: 0;">
+    <div class="center">
+      <button id="app-listeners-button">Listeners</button><br><br>
+      <button id="app-functions-button">Functions</button><br><br>
+      <button id="app-inventories-button">Inventories</button>
+    </div>
+  </div>
+
+  <!-- Bottom part of the screen. -->
+  <div style="height: 60%;border-style: solid;border-width: 2px;overflow-y: scroll;">
+    <div id="app-list" style="text-align: center">
+
+    </div>
+  </div>
+</div>
+
+<!-- Right side of the screen. -->
+<!-- Navigation Bar. -->
+<div style="width: 75%; float:right">
+  <ul>
+    <li><a class="active">Plugin Builder</a></li>
+    <li><a>Create Inventory</a></li>
+    <li><a>Build</a></li>
+  </ul>
+
+  <div>
+    <br>
+    <div class="center" style="border-style: solid; border-width: 1px;width: 50%;height: 15%;overflow-y: scroll;">
+      <h3 id="app-selectedListener" style="text-align: center;">No Listener Selected.</h3>
+      <h3 id="app-getCurrentCommand" style="text-align: center;">No Command.</h3>
+    </div>
+
+    <br>
+
+    <div class="center" style="border-style: solid; border-width: 1px;width: 50%;height: 25%;overflow-y: scroll;">
+      <h3 style="text-align: center;">Arguments:</h3>
+      <div id="app-currentCommandArguments" style="text-align: center;">
+
+      </div>
+      <br>
+      <div style="text-align: center;">
+        <button style="width: 40%;" id="app-addCommand" >Add Command</button>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="center" style="border-style: solid; border-width: 1px;width: 50%;height: 30%;overflow-y: scroll;">
+      <div id="app-commands" style="text-align: center;">
+
+      </div>
+
+      <div style="text-align: center;">
+        <button style="width: 40%;" id="save-listenerData">Save and Exit</button>
+      </div>
+    </div>
+  </div>
+</div>
