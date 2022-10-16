@@ -930,7 +930,7 @@ function setCustomEffects() {
 	}
 	var timeWarping = gameData.taskData["Time Warping"]
 	timeWarping.getEffect = function() {
-		var multiplier = 1 + getBaseLog(2, timeWarping.level + 1)
+		var multiplier = 1 + getBaseLog(10, timeWarping.level + 1)
 		return multiplier
 	}
 	var immortality = gameData.taskData["Life Essence"]
@@ -996,7 +996,7 @@ function getGameSpeed() {
 	var timeWarping = gameData.taskData["Time Warping"]
 	var temporalDimension = gameData.taskData["Temporal Dimension"]
 	var timeLoop = gameData.taskData["Time Loop"]
-	var timeWarpingSpeed = gameData.timeWarpingEnabled ? timeWarping.getEffect() + temporalDimension.getEffect() * timeLoop.getEffect() : 1
+	var timeWarpingSpeed = gameData.timeWarpingEnabled ? timeWarping.getEffect() * temporalDimension.getEffect() * timeLoop.getEffect() : 1
 	return baseGameSpeed * +!gameData.paused * +isAlive() * timeWarpingSpeed
 }
 
