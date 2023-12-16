@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Junior - Virtual Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+  </head>
+  <body>
+    <h1>Junior - Virtual Assistant</h1>
+    <p>1. Press the <b>Record</b> button.</p> 
+    <p>2. Click <b>Allow</b> if it pops up.</p> 
+    <p>3. Say the word <b>Junior</b> and then press <b>Stop</b>.</p>
+    <p>4. Click <b>Upload</b> if the sample is correct. Click <b>Discard</b> when you want to try again.</p>
+    <p>This data will be used as training data for the wake word detection of Junior.</p>
+    <div id="controls">
+  	 <button id="recordButton">Record</button>
+  	 <button id="stopButton" disabled>Stop</button>
+    </div>
+  	<p><strong>Recordings:</strong></p>
+  	<ol id="recordingsList"></ol>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+  	<script src="assets/recorder.js"></script>
+  	<script src="assets/app.js"></script>
+  </body>
+</html>
